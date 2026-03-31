@@ -13,7 +13,7 @@ There is **no backend, database, or API** – it is just HTML, CSS, and a small 
 - **Beginner-friendly structure** that is easy to understand and extend.
 
 ## Technologies Used
-
+hgghhg
 - **HTML5**: Page structure and content.
 - **CSS3**: Simple, modern styling (centered card, responsive spacing).
 - **Vanilla JavaScript**: Small script to handle button click interaction.
