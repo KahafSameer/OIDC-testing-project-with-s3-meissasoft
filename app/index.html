@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OIDC Deployment Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>OIDC Deployment Demo</h1>
+        <p class="subtitle">
+          Deployed using GitHub Actions and AWS OIDC
+        </p>
+        <button id="actionButton" type="button">
+          Click to confirm deployment
+        </button>
+        <p id="statusMessage" class="status-message" aria-live="polite">
+          Waiting for button click...
+        </p>
+      </section>
+      <footer class="footer">
+        <span>Static demo app for CI/CD testing</span>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
