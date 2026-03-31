@@ -1,0 +1,31 @@
+name: OIDC Deploy Demo
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS Credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::140977286852:role/oidc-practice-demo
+          aws-region: us-east-1
+
+      - name: Verify AWS Identity
+        run: aws sts get-caller-identity
+
+      - name: Deploy to S3
+        run: |
+          aws s3 cp ./app s3://oidc-demo-sameer --recursive
